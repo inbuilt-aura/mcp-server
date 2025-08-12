@@ -127,8 +127,10 @@ mcp = FastMCP(
 # --- Tool: validate (required by Puch) ---
 @mcp.tool
 async def validate() -> str:
-    # Hardcoded fallback for quick fix
-    return "919140517360"
+    """Returns the phone number for authentication"""
+    phone_number = "919792118754"  # Your actual Puch AI phone number
+    print(f"DEBUG: Returning phone number: {phone_number}")
+    return phone_number
 
 # --- Tool: job_finder (now smart!) ---
 JobFinderDescription = RichToolDescription(
