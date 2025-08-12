@@ -15,7 +15,7 @@ import httpx
 import readabilipy
 
 # --- Load environment variables ---
-load_dotenv("../.env")  # Look for .env in parent directory
+load_dotenv()  # Look for .env in current directory
 
 TOKEN = os.environ.get("AUTH_TOKEN")
 MY_NUMBER = os.environ.get("MY_NUMBER")
