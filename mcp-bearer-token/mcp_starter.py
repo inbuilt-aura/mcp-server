@@ -127,7 +127,8 @@ mcp = FastMCP(
 # --- Tool: validate (required by Puch) ---
 @mcp.tool
 async def validate() -> str:
-    return MY_NUMBER
+    # Hardcoded fallback for quick fix
+    return "919140517360"
 
 # --- Tool: job_finder (now smart!) ---
 JobFinderDescription = RichToolDescription(
