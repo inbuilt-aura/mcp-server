@@ -288,8 +288,9 @@ async def make_img_black_and_white(
 
 # --- Run MCP Server ---
 async def main():
-    print("🚀 Starting Smart Scheduler MCP server on http://0.0.0.0:8087")
-    await mcp.run_async("streamable-http", host="0.0.0.0", port=8087)
+    port = int(os.environ.get("PORT", 8087))  # Use Render's PORT or default to 8087
+    print(f"🚀 Starting Smart Scheduler MCP server on http://0.0.0.0:{port}")
+    await mcp.run_async("streamable-http", host="0.0.0.0", port=port)
 
 if __name__ == "__main__":
     asyncio.run(main())
